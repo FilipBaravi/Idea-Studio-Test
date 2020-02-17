@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+ 
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 80%;
+  height: auto;
+  min-height: 100vh;
+  padding: 2rem;
+  margin-left:10%;
+
+
+
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding-top: 2rem;
+}
+
+h1+p {
+  font-size: 1.8rem;
+  padding: 2rem 0 3rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 193px;
+  height: 231px;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 100% auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  transition: transform .6s 1s;
+}
+
+.container::before,
+.container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+
+
+.wrap:hover .container::before,
+.wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+.container--1{
+background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ლაით-ბოქსი-500x600.jpg");
+}
+.container--2{
+    background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბადე-სტიკერი-1-500x600.jpg");
+    
+}
+.container--3{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბადე-ბანერი-500x600.jpg"); 
+}
+.container--4{
+   background-image: url(""); 
+}
+.container--5{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბანერი-500x600.jpg"); 
+}
+.container--6{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/სტიკერი.-500x600.jpg"); 
+}
+.container--7{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ჭიქა.-500x600.jpg"); 
+}
+.container--8{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-853x1024-200x240.jpg"); 
+}
+.container--9{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/კეპი-500x600.jpg"); 
+}
+.container--10{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/კალამი-500x600.jpg"); 
+}
+.container--11{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ფლეშკა-500x600.jpg"); 
+}
+.container--12{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/მუყაოს-ჩანთა-500x600.jpg"); 
+}
+.container--13{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/კონვერტი-500x600.jpg"); 
+}
+.container--14{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/კალენდარი-500x600.jpg"); 
+}
+.container--15{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბლოკნოტი-500x600.jpg"); 
+}
+.container--16{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/სავიზიტო-ბარათი-500x600.jpg"); 
+}
+.container--17{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბეიჯები-500x600.jpg"); 
+}
+.container--18{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-853x1024-200x240.jpg"); 
+}
+.container--19{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ბროშურა-500x600.jpg"); 
+}
+.container--20{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/მენიუ-500x600.jpg"); 
+}
+.container--21{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ტრიპლეტი-500x600.jpg"); 
+}
+.container--22{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/პოსტერი-500x600.jpg"); 
+}
+.container--23{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/შპალერი-2.-500x600.jpg"); 
+}
+.container--24{
+   background-image: url("http://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-853x1024-200x240.jpg"); 
+}
+    </style>
+
+<section class="main">
+
+  <div class="wrap wrap--1">
+    <div class="container container--1">
+    
+    </div>
+  </div>
+  
+
+  <div class="wrap wrap--2">
+    <div class="container container--2">
+     
+    </div>
+  </div>
+
+  <div class="wrap wrap--3">
+    <div class="container container--3">
+      
+    </div>
+  </div>
+  <div class="wrap wrap--4">
+    <div class="container container--4">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--5">
+    <div class="container container--5">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--6">
+    <div class="container container--6">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--7">
+    <div class="container container--7">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--8">
+    <div class="container container--8">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--9">
+    <div class="container container--9">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--10">
+    <div class="container container--10">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--11">
+    <div class="container container--11">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--12">
+    <div class="container container--12">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--13">
+    <div class="container container--13">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--14">
+    <div class="container container--14">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--15">
+    <div class="container container--15">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--16">
+    <div class="container container--16">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--17">
+    <div class="container container--17">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--18">
+    <div class="container container--18">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--19">
+    <div class="container container--19">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--20">
+    <div class="container container--20">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--21">
+    <div class="container container--21">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--22">
+    <div class="container container--2">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--23">
+    <div class="container container--23">
+    
+    </div>
+  </div>
+  <div class="wrap wrap--24">
+    <div class="container container--24">
+    
+    </div>
+  </div>
+
+</section>
+</body>
+<script>
+class parallaxTiltEffect {
+
+constructor({element, tiltEffect}) {
+
+  this.element = element;
+  this.container = this.element.querySelector(".container");
+  this.size = [300, 360];
+  [this.w, this.h] = this.size;
+
+  this.tiltEffect = tiltEffect;
+
+  this.mouseOnComponent = false;
+
+  this.handleMouseMove = this.handleMouseMove.bind(this);
+  this.handleMouseEnter = this.handleMouseEnter.bind(this);
+  this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  this.defaultStates = this.defaultStates.bind(this);
+  this.setProperty = this.setProperty.bind(this);
+  this.init = this.init.bind(this);
+
+  this.init();
+}
+
+handleMouseMove(event) {
+  const {offsetX, offsetY} = event;
+
+  let X;
+  let Y;
+
+  if (this.tiltEffect === "reverse") {
+    X = ((offsetX - (this.w/2)) / 3) / 3;
+    Y = (-(offsetY - (this.h/2)) / 3) / 3;
+  }
+
+  else if (this.tiltEffect === "normal") {
+    X = (-(offsetX - (this.w/2)) / 3) / 3;
+    Y = ((offsetY - (this.h/2)) / 3) / 3;
+  }
+
+  this.setProperty('--rY', X.toFixed(2));
+  this.setProperty('--rX', Y.toFixed(2));
+
+  this.setProperty('--bY', (80 - (X/4).toFixed(2)) + '%');
+  this.setProperty('--bX', (50 - (Y/4).toFixed(2)) + '%');
+}
+
+handleMouseEnter() {
+  this.mouseOnComponent = true;
+  this.container.classList.add("container--active");
+}
+
+handleMouseLeave() {
+  this.mouseOnComponent = false;
+  this.defaultStates();
+}
+
+defaultStates() {
+  this.container.classList.remove("container--active");
+  this.setProperty('--rY', 0);
+  this.setProperty('--rX', 0);
+  this.setProperty('--bY', '80%');
+  this.setProperty('--bX', '50%');
+}
+
+setProperty(p, v) {
+  return this.container.style.setProperty(p, v);
+}
+
+init() {
+  this.element.addEventListener('mousemove', this.handleMouseMove);
+  this.element.addEventListener('mouseenter', this.handleMouseEnter);
+  this.element.addEventListener('mouseleave', this.handleMouseLeave);
+}
+
+}
+
+const $ = e => document.querySelector(e);
+
+const wrap1 = new parallaxTiltEffect({
+element: $('.wrap--1'),
+tiltEffect: 'reverse'
+});
+
+const wrap2 = new parallaxTiltEffect({
+element: $('.wrap--2'),
+tiltEffect: 'reverse'
+});
+
+const wrap3 = new parallaxTiltEffect({
+element: $('.wrap--3'),
+tiltEffect: 'reverse'
+});
+const wrap4 = new parallaxTiltEffect({
+element: $('.wrap--4'),
+tiltEffect: 'reverse'
+});
+const wrap5 = new parallaxTiltEffect({
+element: $('.wrap--5'),
+tiltEffect: 'reverse'
+});
+const wrap6 = new parallaxTiltEffect({
+element: $('.wrap--6'),
+tiltEffect: 'reverse'
+});
+const wrap7 = new parallaxTiltEffect({
+element: $('.wrap--7'),
+tiltEffect: 'reverse'
+});
+const wrap8 = new parallaxTiltEffect({
+element: $('.wrap--8'),
+tiltEffect: 'reverse'
+});
+const wrap9 = new parallaxTiltEffect({
+element: $('.wrap--9'),
+tiltEffect: 'reverse'
+});
+const wrap10 = new parallaxTiltEffect({
+element: $('.wrap--10'),
+tiltEffect: 'reverse'
+});
+const wrap11 = new parallaxTiltEffect({
+element: $('.wrap--11'),
+tiltEffect: 'reverse'
+});
+const wrap12 = new parallaxTiltEffect({
+element: $('.wrap--12'),
+tiltEffect: 'reverse'
+});
+const wrap13 = new parallaxTiltEffect({
+element: $('.wrap--13'),
+tiltEffect: 'reverse'
+});
+const wrap14 = new parallaxTiltEffect({
+element: $('.wrap--14'),
+tiltEffect: 'reverse'
+});
+const wrap15 = new parallaxTiltEffect({
+element: $('.wrap--15'),
+tiltEffect: 'reverse'
+});
+const wrap16 = new parallaxTiltEffect({
+element: $('.wrap--16'),
+tiltEffect: 'reverse'
+});
+const wrap17 = new parallaxTiltEffect({
+element: $('.wrap--17'),
+tiltEffect: 'reverse'
+});
+const wrap18 = new parallaxTiltEffect({
+element: $('.wrap--18'),
+tiltEffect: 'reverse'
+});
+const wrap19 = new parallaxTiltEffect({
+element: $('.wrap--19'),
+tiltEffect: 'reverse'
+});
+const wrap20 = new parallaxTiltEffect({
+element: $('.wrap--20'),
+tiltEffect: 'reverse'
+});
+const wrap21 = new parallaxTiltEffect({
+element: $('.wrap--21'),
+tiltEffect: 'reverse'
+});
+const wrap22 = new parallaxTiltEffect({
+element: $('.wrap--22'),
+tiltEffect: 'reverse'
+});
+const wrap23 = new parallaxTiltEffect({
+element: $('.wrap--23'),
+tiltEffect: 'reverse'
+});
+const wrap24 = new parallaxTiltEffect({
+element: $('.wrap--24'),
+tiltEffect: 'reverse'
+});
+</script>
+</html>
+
+
+
+
+
+
+<!-- /* builder row */
+.full_width .themify_builder_row.fullwidth .row_inner {
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
+}
+
+/* post module */
+.col4-3 .loops-wrapper .post,
+.col4-2 .loops-wrapper .post,
+.col4-1 .loops-wrapper .post,
+.col3-2 .loops-wrapper .post,
+.col3-2 .loops-wrapper .post,
+.col2-1 .loops-wrapper .post {
+	text-align: inherit; /* reset text center */
+	margin-bottom: 1em;
+}
+.col4-3 .loops-wrapper.list-post .post-title,
+.col4-2 .loops-wrapper.list-post .post-title,
+.col4-1 .loops-wrapper.list-post .post-title,
+.col3-2 .loops-wrapper.list-post .post-title,
+.col3-2 .loops-wrapper.list-post .post-title,
+.col2-1 .loops-wrapper.list-post .post-title {
+	font-size: 1.6em; /* reset text center */
+	margin: 0 0 .5em;
+}
+/* map module */
+.module-map {
+	margin-bottom: 0;
+}
+
+/* themify-icon shortcode */
+.shortcode.themify-icon .themify-icon-icon {
+	font-size: 1.3em;
+}
+
+/* shorcode button */
+a.shortcode.button {
+	border-radius: 2px;
+	padding: .65em 1em;
+}
+
+.full-section-scrolling .themify_builder .module_row {
+	min-height: 100vh;
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display: flex;
+}
+
+/* Set full width column */
+.full-section-scrolling .themify_builder .module_row,
+.full-section-scrolling.themify_builder_active .row_inner,
+.full-section-scrolling .themify_builder_row .fp-tableCell {
+	width: 100%;
+}
+
+/* builder active full section */
+.full-section-scrolling.themify_builder_active .module_column,
+.full-section-scrolling.themify_builder_active .module_row,
+.full-section-scrolling.themify_builder_active .themify_module_holder {
+	min-height: 100vh;
+}
+.full-section-scrolling .themify_builder .row_inner,
+.full-section-scrolling .row_inner > .tb-column {
+	height: 100%;
+}
+.full-section-scrolling.themify_builder_active .module_subrow .themify_module_holder,
+.full-section-scrolling.themify_builder_active .module_subrow .module_column {
+	min-height: 0;
+	height: auto;
+}
+
+/* set col full section middle aligned */
+.full-section-scrolling.themify_builder_active .themify_module_holder,
+.full-section-scrolling .themify_builder_row.fp-table .module_column {
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center; /* for single line flex container */
+	-webkit-align-content: center;
+	align-content: center; /* for multi-line flex container */
+}
+
+/* set col full sub row section top aligned */
+.full-section-scrolling.themify_builder_active .col_align_top>.module_column>.themify_module_holder,
+.full-section-scrolling .themify_builder_row.fp-table .col_align_top>.module_column {
+	-webkit-flex-align: flex-start;
+	-ms-flex-align: flex-start;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: flex-start;
+	align-content: flex-start;
+}
+
+/* set col full sub row section bottom aligned */
+.full-section-scrolling.themify_builder_active .col_align_bottom>.module_column>.themify_module_holder,
+.full-section-scrolling .themify_builder_row.fp-table .col_align_bottom>.module_column {
+	-webkit-flex-align: flex-end;
+	-ms-flex-align: flex-end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	-webkit-align-content: flex-end;
+	-ms-flex-line-pack: flex-end;
+	align-content: flex-end;
+}
+
+
+
+
+
+
+
+<img src="http://ideastudio.ge/wp-content/uploads/2018/07/ლაით-ბოქსი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბადე-სტიკერი-1-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბადე-ბანერი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/Roll-up-24072018-1-200x240.jpg" width="200" height="240" alt="Roll up 24072018" srcset="https://ideastudio.ge/wp-content/uploads/2018/07/Roll-up-24072018-1-200x240.jpg 200w, https://ideastudio.ge/wp-content/uploads/2018/07/Roll-up-24072018-1-250x300.jpg 250w, https://ideastudio.ge/wp-content/uploads/2018/07/Roll-up-24072018-1.jpg 500w" sizes="(max-width: 200px) 100vw, 200px" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბანერი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/სტიკერი.-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ჭიქა.-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-853x1024-200x240.jpg" width="200" height="240" alt="500x600 1" srcset="https://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-853x1024-200x240.jpg 200w, https://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-250x300.jpg 250w, https://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-768x922.jpg 768w, https://ideastudio.ge/wp-content/uploads/2018/07/მაისური.-500x600-1-853x1024.jpg 853w" sizes="(max-width: 200px) 100vw, 200px" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/კეპი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/კალამი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ფლეშკა-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/მუყაოს-ჩანთა-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/კონვერტი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/კალენდარი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბლოკნოტი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/სავიზიტო-ბარათი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბეიჯები-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-853x1024-200x240.jpg" width="200" height="240" alt="VIP ბარათი 500x600" srcset="https://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-853x1024-200x240.jpg 200w, https://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-250x300.jpg 250w, https://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-768x922.jpg 768w, https://ideastudio.ge/wp-content/uploads/2018/07/VIP-ბარათი-500x600-1-853x1024.jpg 853w" sizes="(max-width: 200px) 100vw, 200px" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ბროშურა-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/მენიუ-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ტრიპლეტი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/პოსტერი-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/შპალერი-2.-500x600.jpg" width="200" height="240" alt="" /> 
+ 
+ <img src="http://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-853x1024-200x240.jpg" width="200" height="240" alt="ტილო -2 500x600" srcset="https://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-853x1024-200x240.jpg 200w, https://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-250x300.jpg 250w, https://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-768x922.jpg 768w, https://ideastudio.ge/wp-content/uploads/2018/07/ტილო-2-500x600-1-853x1024.jpg 853w" sizes="(max-width: 200px) 100vw, 200px" /> -->
